@@ -72,8 +72,8 @@ JS_OBFUSCATION_PATTERNS: Tuple[str, ...] = (
     r"eval\(unescape\(",
     r"eval\(atob\(",
     r"String\.fromCharCode\(",
-    r"\\x[0-9a-fA-F]{2}{4,}",
-    r"\\u[0-9a-fA-F]{4}{4,}",
+    r"\\x[0-9a-fA-F]{2,}",      # <-- {2}{4,} & {2,}
+    r"\\u[0-9a-fA-F]{4,}",      # <-- fixed
     r"document\.write\(unescape",
     r"window\[.{1,20}\]\[.{1,20}\]",
     r"_0x[a-f0-9]{4,}\(",
